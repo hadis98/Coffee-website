@@ -38,7 +38,18 @@ const scrollHeader = () => {
 };
 window.addEventListener("scroll", scrollHeader);
 /*=========== MIXITUP FILTER PRODUCTS ===========*/
+let config = {
+  animation: {
+    duration: 300,
+  },
+  selectors: {
+    target: ".products__card",
+  },
+};
 
+let mixer = mixitup(".products__content", config);
+/*Default filter products*/
+mixer.filter(".delicious");
 /*Link active products*/
 
 
