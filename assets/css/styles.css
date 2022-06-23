@@ -500,7 +500,6 @@ button {
   transform: translateX(0.25rem);
 }
 
-
 /* ======== LOGOS ============ */
 .logo {
   background-color: #fff;
@@ -650,7 +649,7 @@ button {
   flex-direction: column;
   text-align: center;
   margin-top: 1.5rem;
-  row-gap: .6rem;
+  row-gap: 0.6rem;
 }
 
 .footer__social {
@@ -672,4 +671,37 @@ button {
 }
 .footer__copy i {
   color: var(--first-color);
+}
+/* ========SCROLL BAR============ */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(206, 4%, 80%);
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(206, 4%, 64%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(206, 4%, 48%);
+}
+/* ======== SCROLL UP ============ */
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: #fff;
+  box-shadow: 0 4px 12px hsla(206, 4%, 20%, 0.1);
+  display: inline-flex;
+  padding: 0.4rem;
+  border-radius: 0.15rem;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
+/*SHOW SCROLL UP*/
+.show-scroll {
+  bottom: 3rem;
 }
