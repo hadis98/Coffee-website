@@ -1,4 +1,10 @@
 /*=========== LOADER ===========*/
+onload = () => {
+  const load = document.getElementById("load");
+  setTimeout(() => {
+    load.style.display = "none";
+  }, 1500);
+};
 /*=========== SHOW MENU ===========*/
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
