@@ -51,7 +51,18 @@ let mixer = mixitup(".products__content", config);
 /*Default filter products*/
 mixer.filter(".delicious");
 /*Link active products*/
+const linkProducts = document.querySelectorAll(".products__item");
 
+function activeProducts() {
+  // console.log(this); //with function keyword =>this === <li><li/>
+  //with arrow function => this === window object
+  linkProducts.forEach((link) => link.classList.remove("active-product"));
+  this.classList.add("active-product");
+}
+
+linkProducts.forEach((linkProduct) =>
+  linkProduct.addEventListener("click", activeProducts)
+);
 
 /*=========== SHOW SCROLL UP ===========*/
 /*=========== SCROLL SECTIONS ACTIVE LINK ===========*/
